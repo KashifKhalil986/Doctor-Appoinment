@@ -9,7 +9,7 @@ const SpecialityMenu = () => {
     
     <div className="flex sm:justify-center gap-4 pt-5 w-full overflow-auto">
 {specialityData.map((item,index)=>(
-<Link onClick={()=>window.scrollTo(0,0)} className="flex flex-col items-center text-xs cursor-pointer flex-shrink-0 hover:translate-y-[-10px] transition-all duration-500" key={index} to={`/doctors/${item.speciality}`}>
+<Link key={index} to={`/doctors/${item.speciality.replace(/\s+/g, '-').toLowerCase()}`} onClick={()=>window.scrollTo(0,0)} className="flex flex-col items-center text-xs cursor-pointer flex-shrink-0 hover:translate-y-[-10px] transition-all duration-500" >
 <img className="w-16 sm:w-24 mb-2" src={item.image} alt="" />
 <p>{item.speciality}</p>
 </Link>

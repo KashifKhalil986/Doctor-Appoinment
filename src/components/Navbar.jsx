@@ -9,7 +9,7 @@ const Navbar = () => {
   const [token,setToken]=useState(true)
   return (
     <div className="flex items-center justify-between text-sm py-4 mb-5 border-b border-b-gray-400">
-      <img src={assets.logo} alt="logo" className="h-12" />
+      <img onClick={()=>navigate("/")} src={assets.logo} alt="logo" className="h-12" />
 
 
       <div className="hidden md:flex items-start font-medium gap-5 ">

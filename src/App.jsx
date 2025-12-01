@@ -26,6 +26,7 @@ function App() {
       <Route path='/logout' element={<Logout/>}/>
       <Route path='/appoinment/:docId' element={<Appoinment/>}/>
       <Route path='/doctors' element={<Doctor/>}/>
+      <Route path='/doctors/:speciality' element={<Doctor/>}/>
     </Routes>
 <Footer/>
    </div>
