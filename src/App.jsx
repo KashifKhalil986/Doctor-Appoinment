@@ -7,7 +7,6 @@ import Navbar from './components/navbar'
 import Login from './pages/Login'
 import MyAppoinment from './pages/MyAppoinment'
 import MyProfile from './pages/MyProfile'
-import Logout from './pages/Logout'
 import Appoinment from './pages/Appoinment'
 import Doctor from './pages/Doctor'
 import Footer from './components/Footer'
@@ -23,7 +22,6 @@ function App() {
       <Route path='/login' element={<Login/>}/>
       <Route path='/my-appoinment' element={<MyAppoinment/>}/>
       <Route path='/my-profile' element={<MyProfile/>}/>
-      <Route path='/logout' element={<Logout/>}/>
       <Route path='/appoinment/:docId' element={<Appoinment/>}/>
       <Route path='/doctors' element={<Doctor/>}/>
       <Route path='/doctors/:speciality' element={<Doctor/>}/>
