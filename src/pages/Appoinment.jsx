@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { AppContext } from '../context/AppContext';
 import { assets } from '../assets/assets';
+import RelatedDoctor from '../components/RelatedDoctor';
 
 const Appoinment = () => {
 
@@ -125,6 +126,10 @@ setDocSlot(prev => ([...prev,timeSlot]))
 </div>
 <button className='bg-[#5f6FFF] text-white text-sm font-light px-14 py-3 rounded-full my-6'>Book Appoinment</button>
   </div> 
+
+{docInfo && (
+  <RelatedDoctor docId={docId} speciality={docInfo.speciality} />
+)}
     </>
   )
 }
