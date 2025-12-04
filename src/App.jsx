@@ -10,6 +10,7 @@ import MyProfile from './pages/MyProfile'
 import Appoinment from './pages/Appoinment'
 import Doctor from './pages/Doctor'
 import Footer from './components/Footer'
+import Contact from './pages/Contact'
 
 function App() {
 
@@ -25,6 +26,7 @@ function App() {
       <Route path='/appoinment/:docId' element={<Appoinment/>}/>
       <Route path='/doctors' element={<Doctor/>}/>
       <Route path='/doctors/:speciality' element={<Doctor/>}/>
+      <Route path='/contact' element={<Contact/>}/>
     </Routes>
 <Footer/>
    </div>
