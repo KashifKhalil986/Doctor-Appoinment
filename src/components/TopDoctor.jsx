@@ -14,7 +14,7 @@ const navigate = useNavigate()
 
         <div  className="w-full grid grid-cols-[repeat(auto-fill,minmax(200px,1fr))] gap-4 pt-5 gap-y-6 px-3 sm:px-0">
             {doctors.slice(0,10).map((item,index)=>(
-<div onClick={()=>navigate(`/appoinment/${item._id}`)} key={index} className="border border-blue-200 rounded-xl overflow-hidden cursor-pointer hover:translate-y-[-10px] transition-all duration-500">
+<div onClick={()=>navigate(`/appointment/${item._id}`)} key={index} className="border border-blue-200 rounded-xl overflow-hidden cursor-pointer hover:translate-y-[-10px] transition-all duration-500">
     <img className="bg-blue-50" src={item.image} alt="" />
     <div className="p-2">
         <div className="flex items-center gap-2 text-center text-sm text-green-500">
