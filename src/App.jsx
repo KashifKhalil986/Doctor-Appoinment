@@ -1,7 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import About from "./pages/website/About";
-import Home from "./pages/website/home";
+import Home from "./pages/website/Home";
 import Navbar from "./components/Navbar";
 import Login from "./pages/website/Login";
 import MyAppointment from "./pages/website/MyAppointment";
