@@ -65,7 +65,7 @@ const MyProfile = () => {
         setImage(null);
       } else {
         toast.error(data.message || "Failed to update profile");
-        console.log("data message", data.message);
+        // console.log("data message", data.message);
       }
     } catch (error) {
       console.error(error);

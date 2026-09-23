@@ -71,10 +71,10 @@ const Appoinment = () => {
   }, [docInfo]);
 
   useEffect(() => {
-    console.log("doc slot", docSlots);
+    // console.log("doc slot", docSlots);
   }, [docSlots]);
 
-  console.log("doc info", docInfo);
+  // console.log("doc info", docInfo);
 
   return (
     docInfo && (

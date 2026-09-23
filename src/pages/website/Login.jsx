@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { AppContext } from "../../context/AppContext";
 import { toast } from "react-toastify";
@@ -12,7 +12,7 @@ const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [name, setName] = useState("");
-  const { BackendUrl, setToken, token } = useContext(AppContext);
+  const { BackendUrl, setToken } = useContext(AppContext);
 
   const onSubmitHandler = async (event) => {
     event.preventDefault();
@@ -29,7 +29,8 @@ const Login = () => {
           localStorage.setItem("token", response.data.token);
           setToken(response.data.token);
           toast.success("Account created successfully!");
-          console.log("response data", response.data);
+          navigate("/");
+          // console.log("response data", response.data);
         } else {
           toast.error(response.data.message || "Failed to create account");
         }
@@ -43,6 +44,7 @@ const Login = () => {
           localStorage.setItem("token", response.data.token);
           setToken(response.data.token);
           toast.success("Logged in successfully!");
+          navigate("/");
         } else {
           toast.error(response.data.message || "Failed to log in");
         }
@@ -51,12 +53,6 @@ const Login = () => {
       toast.error(error.response?.data?.message || "An error occurred");
     }
   };
-
-  useEffect(() => {
-    if (token) {
-      navigate("/");
-    }
-  }, [token]);
 
   return (
     <form onSubmit={onSubmitHandler} className="min-h-[80vh] flex items-center">

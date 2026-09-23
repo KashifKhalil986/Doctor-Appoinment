@@ -3,10 +3,10 @@ import { useNavigate, useParams } from "react-router-dom";
 import { AppContext } from "../../context/AppContext";
 
 const Doctor = () => {
-  console.log("doctor component render");
+  // console.log("doctor component render");
   const { doctors } = useContext(AppContext);
   const { speciality } = useParams();
-  console.log("speciality", speciality);
+  // console.log("speciality", speciality);
   console.log(
     "doc speciality",
     doctors?.map((d) => d.speciality),
